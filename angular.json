@@ -91,7 +91,7 @@
         }
       }
     },
-    "angular-testing-course-e2e": {
+    "e2e": {
       "root": "",
       "sourceRoot": "",
       "projectType": "application",
@@ -100,7 +100,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "angular-testing-course:serve"
+            "devServerTarget": "angular-testing-course-2:serve"
           }
         }
       }

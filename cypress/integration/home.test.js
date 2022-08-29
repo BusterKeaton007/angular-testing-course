@@ -8,8 +8,9 @@ describe('Home Page', () => {
         cy.fixture('courses.json').as("coursesJSON");
 
         cy.server();
-
-        cy.route('/api/courses', "@coursesJSON").as("courses");
+        // C:\Users\barthold\Documents\workspace\angular-testing-course-2\cypress\fixtures\courses.json
+        cy.intercept('GET', '/api/courses', { fixture: 'courses.json' }).as("courses" );
+        // cy.route('/api/courses', "@coursesJSON").as("courses");
 
         cy.visit('/');
 

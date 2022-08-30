@@ -27,5 +27,6 @@ jobs:
           key: ng-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
             - "node_modules"
-            - "/home/circleci/.cache/Cypress"
+            - ~/.npm
+            - ~/.cache/Cypress
       - run: npm run e2e

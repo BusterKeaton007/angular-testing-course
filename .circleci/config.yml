@@ -18,6 +18,11 @@ jobs:
       - restore_cache:
           key: ng-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm install
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules/*
+            - cypress/*
       - save_cache:
           key: ng-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
